@@ -1,0 +1,129 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+ \usepackage{gensymb}
+ \usepackage{polynom}
+\usepackage{amssymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+ \usepackage{stfloats}
+\usepackage{bm} 
+ \usepackage{longtable}
+ \usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+ \usepackage[breaklinks=true]{hyperref}
+\usepackage{listings}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+    \usepackage{multirow}                                         
+    \usepackage{hhline}                                           
+    \usepackage{ifthen}                                           
+    \usepackage{lscape}     
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{ 
+frame=single,
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline= (char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.)}
+\providecommand{\rbrak}[1]{\ensuremath{\left[#1\right.]}}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\renewcommand{\thetable}{\arabic{table}} 
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure{}
+\let\vec\mathbf{}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 4 11th Class}
+\author{Gunjit Mittal (AI21BTECH11011)}
+\maketitle
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/GunjitMittal/Assignment4/tree/main/Assignment4/codes
+\end{lstlisting}
+Download all latex codes from 
+\begin{lstlisting}
+https://github.com/GunjitMittal/Assignment4/tree/main/Assignment4 
+\end{lstlisting} 
+\section{Question}
+In a relay race there are five teams A, B, C, D and E.\\ 
+\begin{enumerate}[label= (\alph*)]
+\item What is the probability that A, B and C finish first, second and third,
+respectively.\\
+\item What is the probability that A, B and C are first three to finish (in any order)
+\end{enumerate}
+(Assume that all finishing orders are equally likely)
+\section{Solution}
+\solution{}
+Let us consider five random variables $X_A, X_B, X_C, X_D ~\text{and}~ X_E \in \{1,2,3,4,5\}$ where $X_Y=i$ represents that $Y$ team finished in $i_{th}$ place and all the $X_Y$ are distinct
+\begin{enumerate}[label= (\alph*)]
+    \item A, B and C finsishing first, second and third respectively is represented by $X_A=1, X_B=2 ~\text{and}~  X_C=3$\\
+    Total number of finishing orers $= 5! = 120$\\
+    Fixing $X_A, X_B and X_C $the number of possible orders will become $\frac{5!}{5\times4\times3}=\frac{120}{60}=2$
+    $\therefore \Pr(X_A=1, X_B=2 ~\text{and}~ X_C=3) = \frac{2}{120}=\frac{1}{60}$
+    \item A, B and C finishing in top 3 irrespective of order is represented by $X_A,X_B,X_C \in\{1,2,3\}$
+    $\therefore \Pr(X_A,X_B,X_C \in\{1,2,3\})=\frac{1}{60}\times3!=\frac{1}{10}$
+\end{enumerate}
+\end{document} 
